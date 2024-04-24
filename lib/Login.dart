@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:typed_data';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -53,6 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 TextField(
+                  textCapitalization: TextCapitalization.words,
                   controller: _firstNameController,
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),
@@ -61,6 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 const SizedBox(height: 20,),
                 TextField(
+                  textCapitalization: TextCapitalization.words,
                   controller: _lastNameController,
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),
@@ -69,6 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 const SizedBox(height: 20,),
                 TextField(
+                  textCapitalization: TextCapitalization.words,
                   controller: _middleNameController,
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),

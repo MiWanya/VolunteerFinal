@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:volont/Admin_register_form.dart';
-import 'package:volont/Admins.dart';
-import 'package:volont/controller.dart';
+import 'package:VolontKubSAU/Admin_register_form.dart';
+import 'package:VolontKubSAU/Admins.dart';
+import 'package:VolontKubSAU/controller.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert' as convert;
 
@@ -144,6 +144,7 @@ class _Register_pageState extends State<Register_page> {
               child: Column(
                 children: <Widget>[
                   TextFormField(
+                    textCapitalization: TextCapitalization.words,
                     controller: firstNameController,
                     validator: (value){
                       if (value!.isEmpty){
@@ -159,6 +160,7 @@ class _Register_pageState extends State<Register_page> {
                   ),
                   const SizedBox(height: 20,),
                   TextFormField(
+                    textCapitalization: TextCapitalization.words,
                     controller: lastNameController,
                     validator: (value){
                       if (value!.isEmpty){
@@ -174,6 +176,7 @@ class _Register_pageState extends State<Register_page> {
                   ),
                   const SizedBox(height: 20,),
                   TextFormField(
+                    textCapitalization: TextCapitalization.words,
                     controller: middleNameController,
                     validator: (value){
                       if (value!.isEmpty){
@@ -215,7 +218,9 @@ class _Register_pageState extends State<Register_page> {
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
-                  const SizedBox(height: 20,),
+                  const SizedBox(height: 10,),
+                  const Divider(height: 4,),
+                  const SizedBox(height: 10,),
                   DropdownButtonFormField(
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),

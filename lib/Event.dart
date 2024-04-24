@@ -4,7 +4,7 @@ import 'package:mailer/smtp_server.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
-import 'package:volont/Login.dart';
+import 'package:VolontKubSAU/Login.dart';
 
 Future<String> fetchPageContent(String url) async {
   var client = http.Client();

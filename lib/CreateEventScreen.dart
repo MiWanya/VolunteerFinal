@@ -2,9 +2,9 @@ import 'dart:convert' as convert;
 import 'EvenClass.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:volont/Event_form.dart';
-import 'package:volont/Event_controller.dart';
-import 'package:volont/Register.dart';
+import 'package:VolontKubSAU/Event_form.dart';
+import 'package:VolontKubSAU/Event_controller.dart';
+import 'package:VolontKubSAU/Register.dart';
 import 'package:http/http.dart' as http;
 
 late Events _selectedAdmin;
@@ -142,6 +142,7 @@ class _CreateScreenState extends State<CreateScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     TextFormField(
+                      textCapitalization: TextCapitalization.words,
                       controller: eventNameController,
                       validator: (value){
                         if (value!.isEmpty){
@@ -157,6 +158,7 @@ class _CreateScreenState extends State<CreateScreen> {
                     ),
                     const SizedBox(height: 20),
                     TextFormField(
+                      textCapitalization: TextCapitalization.words,
                       controller: categoryController,
                       validator: (value){
                         if (value!.isEmpty){
@@ -172,6 +174,7 @@ class _CreateScreenState extends State<CreateScreen> {
                     ),
                     const SizedBox(height: 20),
                     TextFormField(
+                      textCapitalization: TextCapitalization.words,
                       controller: startDateController,
                       validator: (value){
                         if (value!.isEmpty){
@@ -187,6 +190,7 @@ class _CreateScreenState extends State<CreateScreen> {
                     ),
                     const SizedBox(height: 20),
                     TextFormField(
+                      textCapitalization: TextCapitalization.words,
                       controller: endDateController,
                       validator: (value){
                         if (value!.isEmpty){
@@ -202,6 +206,7 @@ class _CreateScreenState extends State<CreateScreen> {
                     ),
                     const SizedBox(height: 20),
                     TextFormField(
+                      textCapitalization: TextCapitalization.words,
                       controller: locationController,
                       validator: (value){
                         if (value!.isEmpty){
@@ -230,7 +235,9 @@ class _CreateScreenState extends State<CreateScreen> {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 20,),
+                    const SizedBox(height: 10,),
+                    const Divider(height: 4, color: Colors.grey,),
+                    const SizedBox(height: 10,),
                     DropdownButtonFormField(
                       decoration: const InputDecoration(
                         border: OutlineInputBorder(),
@@ -250,7 +257,7 @@ class _CreateScreenState extends State<CreateScreen> {
                       },
                       value: _adminsList.isNotEmpty ? _adminsList[0] : null, // set default value if eventsList is not empty.
                     ),
-                    const SizedBox(height: 20,),
+                    const SizedBox(height: 10,),
                     ElevatedButton(
                         onPressed: () async {
                           if (_selectedAdmin == null) {
@@ -278,7 +285,9 @@ class _CreateScreenState extends State<CreateScreen> {
                           ),
                         ),
                     ),
-                    const SizedBox(height: 20,),
+                    const SizedBox(height: 10,),
+                    const Divider(height: 4, color: Colors.grey,),
+                    const SizedBox(height: 10,),
                     ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.blueAccent,
